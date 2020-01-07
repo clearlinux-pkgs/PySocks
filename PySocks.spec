@@ -4,7 +4,7 @@
 #
 Name     : PySocks
 Version  : 1.6.7
-Release  : 5
+Release  : 6
 URL      : https://github.com/Anorov/PySocks/archive/1.6.7.tar.gz
 Source0  : https://github.com/Anorov/PySocks/archive/1.6.7.tar.gz
 Summary  : No detailed summary available
