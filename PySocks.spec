@@ -4,12 +4,12 @@
 #
 Name     : PySocks
 Version  : 1.7.0
-Release  : 10
+Release  : 11
 URL      : https://github.com/Anorov/PySocks/archive/1.7.0/PySocks-1.7.0.tar.gz
 Source0  : https://github.com/Anorov/PySocks/archive/1.7.0/PySocks-1.7.0.tar.gz
 Summary  : A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information.
 Group    : Development/Tools
-License  : BSD-3-Clause
+License  : Apache-2.0 BSD-3-Clause
 Requires: PySocks-license = %{version}-%{release}
 Requires: PySocks-python = %{version}-%{release}
 Requires: PySocks-python3 = %{version}-%{release}
@@ -62,11 +62,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583521636
+export SOURCE_DATE_EPOCH=1603401607
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
@@ -76,6 +76,7 @@ export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/PySocks
 cp %{_builddir}/PySocks-1.7.0/LICENSE %{buildroot}/usr/share/package-licenses/PySocks/553bbf60cec5702a5b3a4e23a70e72322fbec333
+cp %{_builddir}/PySocks-1.7.0/test/bin/3proxy.license %{buildroot}/usr/share/package-licenses/PySocks/d122c44dcbd4bc9b0e1474b3f46d468bb6d8050c
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -87,6 +88,7 @@ echo ----[ mark ]----
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/PySocks/553bbf60cec5702a5b3a4e23a70e72322fbec333
+/usr/share/package-licenses/PySocks/d122c44dcbd4bc9b0e1474b3f46d468bb6d8050c
 
 %files python
 %defattr(-,root,root,-)
