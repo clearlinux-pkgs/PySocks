@@ -4,7 +4,7 @@
 #
 Name     : PySocks
 Version  : 1.7.0
-Release  : 23
+Release  : 24
 URL      : https://github.com/Anorov/PySocks/archive/1.7.0/PySocks-1.7.0.tar.gz
 Source0  : https://github.com/Anorov/PySocks/archive/1.7.0/PySocks-1.7.0.tar.gz
 Summary  : A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information.
@@ -14,11 +14,11 @@ Requires: PySocks-license = %{version}-%{release}
 Requires: PySocks-python = %{version}-%{release}
 Requires: PySocks-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(py)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 PySocks
@@ -62,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1603401607
+export SOURCE_DATE_EPOCH=1644185434
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "

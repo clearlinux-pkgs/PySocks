@@ -1,7 +1,3 @@
 # This file contains recursive sources that require this package
-conda
-docker-compose
-gcs-oauth2-boto-plugin
-gsutil
-requests
-urllib3
+pypi-gcs_oauth2_boto_plugin
+pypi-gsutil
