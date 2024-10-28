@@ -7,7 +7,7 @@
 #
 Name     : PySocks
 Version  : 1.7.0
-Release  : 26
+Release  : 27
 URL      : https://github.com/Anorov/PySocks/archive/1.7.0/PySocks-1.7.0.tar.gz
 Source0  : https://github.com/Anorov/PySocks/archive/1.7.0/PySocks-1.7.0.tar.gz
 Summary  : A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information.
